@@ -1,0 +1,10 @@
+
+- hosts: all
+  roles:
+    - pre-role-one
+
+
+- hosts: all
+  roles:
+    - add-file-one
+    - add-file-two

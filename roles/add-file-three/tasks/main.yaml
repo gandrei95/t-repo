@@ -1,0 +1,6 @@
+---
+- name: create file
+  file:
+    path: /home/gabriel/add-file-three.txt
+    state: touch
+

@@ -1,0 +1,6 @@
+---
+- name: create file
+  file:
+    path: /home/gabriel/pre-role-one.txt
+    state: touch
+
