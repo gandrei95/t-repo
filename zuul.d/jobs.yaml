@@ -14,7 +14,7 @@
 
 - job:
     name: test-ci-job
-    parent: base
+    parent: base-job
     description: |
       Test CI job inherited from base-job
     pre-run: playbooks/test-ci-job/pre.yaml
