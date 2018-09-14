@@ -10,7 +10,7 @@
       gerrit:
         - event: patchset-created
         - event: comment-added
-          comment: ## have to add comment string
+          comment: (?i)^(Patch Set [0-9]+:)?( [\w\\+-]*)*(\n\n)?\s*(recheck-gandrei95)
     success:
       gerrit:
         Verified: 1
