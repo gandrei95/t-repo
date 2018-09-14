@@ -1,0 +1,10 @@
+
+- tenant:
+    name: openstack
+    source:
+      github:
+        config-projects:
+          - gandrei95/t-repo
+      os-review:
+        untrusted-projects:
+          - openstack-dev/ci-sandbox

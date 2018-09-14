@@ -1,0 +1,8 @@
+
+- hosts: all
+
+  tasks:
+    - name: create test-ci-job-pre file
+      file:
+        path: /home/gabriel/test-ci-job-pre.txt
+        state: touch
