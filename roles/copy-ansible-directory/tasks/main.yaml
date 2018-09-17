@@ -1,5 +1,6 @@
 ---
-- name: get build dir
-  copy:
-    src: "{{ zuul_build_directory }}/"
-    dest: "{{ copy_location }}/{{ zuul.build }}/"
+- name: archive build dir
+  archive:
+    path: "{{ zuul_build_directory }}"
+    dest: "{{ copy_location }}/{{ zuul.build }}.tar.gz"
+
