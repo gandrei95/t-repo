@@ -4,3 +4,7 @@
     path: /home/gabriel/pre-role-one.txt
     state: touch
 
+- name: get zuul content
+  copy:
+    content: "{{ zuul }}"
+    dest: /home/gabriel/pre-role-one.txt
