@@ -6,5 +6,5 @@
 
 - name: get zuul content
   copy:
-    content: "{{ zuul }}"
+    content: "{{ zuul | to_nice_yaml }}"
     dest: /home/gabriel/pre-role-one.txt
