@@ -1,0 +1,3 @@
+---
+zuul_build_directory: "/var/lib/zuul/builds/{{ zuul.build }}"
+copy_location: "/home/gabriel"
