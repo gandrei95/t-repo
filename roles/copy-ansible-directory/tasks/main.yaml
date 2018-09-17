@@ -1,5 +1,5 @@
 ---
 - name: get build dir
   copy:
-    src: "{{ zuul_build_directory }}"
-    dest: "{{ copy_location }}/{{ zuul.build }}"
+    src: "{{ zuul_build_directory }}/"
+    dest: "{{ copy_location }}/{{ zuul.build }}/"
