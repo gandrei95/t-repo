@@ -4,3 +4,6 @@
     path: /home/gabriel/add-file-three.txt
     state: touch
 
+- name: sleep for 2 min
+  pause:
+    minutes: 2
