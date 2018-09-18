@@ -8,3 +8,8 @@
   roles:
     - add-file-one
     - add-file-two
+
+
+- hosts: localhost
+  roles:
+    - create-file-localhost

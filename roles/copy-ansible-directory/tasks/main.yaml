@@ -3,10 +3,10 @@
 - name: copy inv file
   copy:
     src: "{{ zuul.executor.inventory_file }}"
-    dest: /opt/inventory.yaml
+    dest: /opt/zuul/inventory.yaml
 
 - name: archive build dir
   archive:
     path: "{{ zuul_build_directory }}"
-    dest: "{{ copy_location }}/work.tar.gz"
+    dest: "{{ copy_location }}/zuul/work.tar.gz"
 
