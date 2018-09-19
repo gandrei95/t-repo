@@ -1,14 +1,9 @@
 ---
-
-- name: copy inv file
-  copy:
-    src: "{{ zuul.executor.inventory_file }}"
-    dest: /opt/zuul/inventory.yaml
+- name: ensure logs are readable
   delegate_to: localhost
+  command: "chmod -R u=rwX,g=rX,o=rX {{ zuul.executor.log_root }}/"
 
-- name: archive build dir
-  archive:
-    path: "{{ zuul_build_directory }}"
-    dest: "{{ copy_location }}/zuul/work.tar.gz"
-  delegate_to: localhost
-
+- name: put logs in /opt/zuul
+  synchronize:
+    src: "{{ zuul.executor.log_root }}/"
+    dest: "/opt/zuul/{{ zuul.build }}"
