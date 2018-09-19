@@ -14,5 +14,5 @@
   tasks:
     - name: pre-task-file
       file:
-        path: /home/gabriel/pre-task-file.txt
+        path: /opt/zuul/pre-task-file.txt
         state: touch
