@@ -4,9 +4,11 @@
   copy:
     src: "{{ zuul.executor.inventory_file }}"
     dest: /opt/zuul/inventory.yaml
+  delegate_to: localhost
 
 - name: archive build dir
   archive:
     path: "{{ zuul_build_directory }}"
     dest: "{{ copy_location }}/zuul/work.tar.gz"
+  delegate_to: localhost
 
