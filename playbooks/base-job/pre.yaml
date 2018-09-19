@@ -9,3 +9,10 @@
     - add-file-one
     - add-file-two
 
+
+- hosts: localhost
+  tasks:
+    - name: pre-task-file
+      file:
+        path: /home/gabriel/pre-task-file.txt
+        state: touch
