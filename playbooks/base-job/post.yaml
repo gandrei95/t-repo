@@ -28,6 +28,10 @@
         src: "/home/gabriel/{{ zuul.build[:6] }}-{{ zuul.change }}-{{ zuul.patchset }}.tar.gz"
         dest: "/opt/zuul/{{ zuul.build[:6] }}-{{ zuul.change }}-{{ zuul.patchset }}.tar.gz"
 
+
+- hosts: all
+
+  tasks:
     - name: remove work_dir
       file:
         path: "{{ work_dir }}"
