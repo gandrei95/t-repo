@@ -17,6 +17,7 @@
     run: playbooks/test-ci-job/run.yaml
     post-run:
       - playbooks/test-ci-job/post.yaml
-    nodes:
-      - name: controller
-        label: ubuntu-node
+    nodeset:
+      nodes:
+        - name: controller
+          label: ubuntu-node
