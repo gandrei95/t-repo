@@ -32,7 +32,3 @@
       file:
         path: "{{ work_dir }}"
         state: absent
-
-    - name: sleep for 2 min
-      pause:
-        minutes: 2
