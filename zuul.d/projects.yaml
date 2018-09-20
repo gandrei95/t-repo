@@ -1,6 +1,8 @@
 
 - project:
     name: openstack-dev/ci-sandbox
+    vars:
+      work_dir: /home/gabriel/workdir
     check:
       jobs:
         - test-ci-job

@@ -1,6 +1,6 @@
 ---
 - name: create file
   file:
-    path: /home/gabriel/add-file-two.txt
+    path: "{{ work_dir }}/add-file-two.txt"
     state: touch
 

@@ -1,9 +1,5 @@
 ---
 - name: create file
   file:
-    path: /home/gabriel/add-file-three.txt
+    path: "{{ work_dir }}/add-file-three.txt"
     state: touch
-
-- name: sleep for 2 min
-  pause:
-    minutes: 2

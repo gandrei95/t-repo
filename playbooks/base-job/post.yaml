@@ -3,3 +3,26 @@
   roles:
     - add-file-three
 
+
+- hosts: controller
+
+  tasks:
+    - name: copy logs to work_dir
+      copy:
+        src: "{{ zuul.executor.log_root }}/{{ item }}"
+        dest: "{{ work_dir }}/{{ item }}"
+      with_items: ["job-output.json", "job-output.txt"]
+
+    - name: copy results file
+      copy:
+        src: "{{ zuul.executor.result_data_file }}"
+        dest: "{{ work_dir }}/results.json"
+
+    - name: archive work_dir
+      archive:
+        path: "{{ work_dir }}"
+        dest: "/home/gabriel/{{ zuul.build[:6]}}-{{ zuul.change }}-{{ zuul.patchset }}.tar.gz"
+
+    - name: sleep for 2 min
+      pause:
+        minutes: 2

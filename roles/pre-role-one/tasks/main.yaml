@@ -1,10 +1,15 @@
 ---
+- name: create work_dir
+  file:
+    path: "{{ work_dir }}"
+    state: directory
+
 - name: create file
   file:
-    path: /home/gabriel/pre-role-one.txt
+    path: "{{ work_dir }}/pre-role-one.txt"
     state: touch
 
 - name: get zuul content
   copy:
     content: "{{ zuul | to_nice_yaml }}"
-    dest: /home/gabriel/pre-role-one.txt
+    dest: "{{ work_dir }}/pre-role-one.txt"

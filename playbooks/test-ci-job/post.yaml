@@ -4,5 +4,5 @@
   tasks:
     - name: create test-ci-job-post file
       file:
-        path: /home/gabriel/test-ci-job-post.txt
+        path: "{{ work_dir }}/test-ci-job-post.txt"
         state: touch
