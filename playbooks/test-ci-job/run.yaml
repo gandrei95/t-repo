@@ -6,3 +6,21 @@
       file:
         path: /home/gabriel/test-ci-job-run.txt
         state: touch
+
+
+- hosts: controller
+
+  tasks:
+    - name: create controller-job-run file
+      file:
+        path: /home/gabriel/controller-job-run.txt
+        state: touch
+
+
+- hosts: compute
+
+  tasks:
+    - name: create compute-job-run file
+      file:
+        path: /home/gabriel/compute-job-run.txt
+        state: touch

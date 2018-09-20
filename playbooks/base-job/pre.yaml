@@ -8,11 +8,3 @@
   roles:
     - add-file-one
     - add-file-two
-
-
-- hosts: localhost
-  tasks:
-    - name: pre-task-file
-      file:
-        path: /opt/zuul/pre-task-file.txt
-        state: touch

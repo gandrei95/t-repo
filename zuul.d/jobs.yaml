@@ -21,3 +21,5 @@
       nodes:
         - name: controller
           label: ubuntu-node
+        - name: compute
+          label: ubuntu-node
