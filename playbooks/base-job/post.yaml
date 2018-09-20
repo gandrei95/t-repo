@@ -26,3 +26,8 @@
     - name: sleep for 2 min
       pause:
         minutes: 2
+
+    - name: remove work_dir
+      file:
+        path: "{{ work_dir }}"
+        state: absent
