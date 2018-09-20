@@ -27,6 +27,11 @@
       pause:
         minutes: 2
 
+    - name: fetch archive to local
+      fetch:
+        src: "/home/gabriel/{{ zuul.build[:6] }}-{{ zuul.change }}-{{ zuul.patchset }}.tar.gz"
+        dest: "/opt/zuul/{{ zuul.build[:6] }}-{{ zuul.change }}-{{ zuul.patchset }}.tar.gz"
+
     - name: remove work_dir
       file:
         path: "{{ work_dir }}"
