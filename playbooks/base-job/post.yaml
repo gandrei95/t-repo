@@ -28,3 +28,6 @@
         src: "/home/gabriel/{{ zuul.build[:6] }}-{{ zuul.change }}-{{ zuul.patchset }}.tar.gz"
         dest: "/opt/zuul/{{ zuul.build[:6] }}-{{ zuul.change }}-{{ zuul.patchset }}.tar.gz"
 
+    - name: pause for 3 min
+      pause:
+        minutes: 3
